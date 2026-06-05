@@ -9,8 +9,11 @@ size = Vector2(123, 122)
 metadata/_edit_group_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=218306211]
+position = Vector2(0.20000076, -2.7999992)
+scale = Vector2(0.5, 0.5)
 texture = ExtResource("1_br0rw")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=48947833]
-position = Vector2(0.5, 0)
+position = Vector2(0.70000076, -2.7999992)
+scale = Vector2(0.5, 0.5)
 shape = SubResource("RectangleShape2D_ykvnc")
