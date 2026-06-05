@@ -63,3 +63,9 @@ func _on_down_area_body_entered(body: Node2D) -> void:
 func _on_down_area_body_exited(body: Node2D) -> void:
 	if body.name == "Player":
 		moveDown = false
+		
+		
+#goal area detection
+func _on_goal_area_body_entered(body: Node2D) -> void:
+	if body.name == "Robot":
+		get_tree().change_scene_to_file("res://level_1.tscn")

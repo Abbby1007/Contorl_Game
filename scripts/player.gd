@@ -1,7 +1,7 @@
 extends CharacterBody2D
 
 #8 way movement for the player
-@export var speed = 400
+@export var speed = 200
 
 func get_input():
 	var input_direction = Input.get_vector("left","right","up","down")
