@@ -66,8 +66,8 @@ func _on_down_area_body_exited(body: Node2D) -> void:
 		
 		
 #goal area detection
-func go_level_1 ():
-	get_tree().change_scene_to_file("res://level_1.tscn")
+func go_congrats ():
+	get_tree().change_scene_to_file("res://scenes/congrats.tscn")
 func _on_goal_area_body_entered(body: Node2D) -> void:
 	if body.name == "Robot":
-		call_deferred("go_level_1")
+		call_deferred("go_congrats")

@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://dym4rshd0771i"]
+
+[node name="Congrats" type="Node2D" unique_id=1888307490]
+
+[node name="Label" type="Label" parent="." unique_id=1949845244]
+offset_left = -90.0
+offset_top = 125.0
+offset_right = 886.0
+offset_bottom = 338.0
+theme_override_font_sizes/font_size = 50
+text = "CONGRATS ON
+ COMPLETING 
+THE GAME"
+horizontal_alignment = 1
