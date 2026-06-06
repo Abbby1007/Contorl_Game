@@ -1,37 +1,24 @@
-[gd_scene format=3 uid="uid://diuip52ta3wnl"]
+[gd_scene format=3 uid="uid://c4smhvy1br0wu"]
 
-[ext_resource type="Texture2D" uid="uid://c6ex8tsw8x11i" path="res://icon.svg" id="1_3hls8"]
-[ext_resource type="Script" uid="uid://c1cstj4cdl0v" path="res://level_1.gd" id="1_rka8t"]
-[ext_resource type="PackedScene" uid="uid://ce50yt7p5h1x6" path="res://scenes/Player.tscn" id="2_hn12h"]
-[ext_resource type="Texture2D" uid="uid://c56xbjafckib7" path="res://art/Solaria Demo Tiles.png" id="3_ihfcg"]
-[ext_resource type="PackedScene" uid="uid://dahxnxjfyfnjn" path="res://scenes/robot.tscn" id="4_rka8t"]
+[ext_resource type="Texture2D" uid="uid://c6ex8tsw8x11i" path="res://icon.svg" id="1_eqxsl"]
+[ext_resource type="PackedScene" uid="uid://dahxnxjfyfnjn" path="res://scenes/robot.tscn" id="2_b4j7a"]
+[ext_resource type="Texture2D" uid="uid://c56xbjafckib7" path="res://art/Solaria Demo Tiles.png" id="3_wo48x"]
+[ext_resource type="PackedScene" uid="uid://ce50yt7p5h1x6" path="res://scenes/Player.tscn" id="4_y0kc7"]
 
-[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_hbghi"]
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_ne2mo"]
 normal = Vector2(0.99997044, -0.0076920516)
 
-[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_hn12h"]
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_6cvei"]
 normal = Vector2(-0.007092023, 0.9999749)
 
-[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_ihfcg"]
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_que50"]
 distance = -4.4649215
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_rka8t"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hey2k"]
 size = Vector2(126.633316, 114.2865)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_5hph3"]
-size = Vector2(51, 53)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_j7kpp"]
-size = Vector2(50.9299, 51.07428)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_bjebc"]
-size = Vector2(48.999996, 52.998222)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_5rr72"]
-size = Vector2(49.780228, 53.04509)
-
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_rka8t"]
-texture = ExtResource("3_ihfcg")
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_172wr"]
+texture = ExtResource("3_wo48x")
 0:0/0 = 0
 1:0/0 = 0
 2:0/0 = 0
@@ -411,75 +398,87 @@ texture = ExtResource("3_ihfcg")
 3:18/0 = 0
 4:18/0 = 0
 
-[sub_resource type="TileSet" id="TileSet_5hph3"]
+[sub_resource type="TileSet" id="TileSet_g2hoc"]
 physics_layer_0/collision_layer = 1
-sources/0 = SubResource("TileSetAtlasSource_rka8t")
+sources/0 = SubResource("TileSetAtlasSource_172wr")
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_gyffv"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fldb1"]
+size = Vector2(51, 53)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_guvtl"]
+size = Vector2(50.9299, 51.07428)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_igmy8"]
+size = Vector2(48.999996, 52.998222)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wdtqu"]
+size = Vector2(49.780228, 53.04509)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_eqxsl"]
 size = Vector2(123.33333, 123.33333)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_1pe0h"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_b4j7a"]
 size = Vector2(64, 63)
 
-[node name="level 1" type="Node2D" unique_id=531721738]
-script = ExtResource("1_rka8t")
+[node name="level2" type="Node2D" unique_id=107501510]
 
-[node name="Walls" type="StaticBody2D" parent="." unique_id=1634896198]
+[node name="Walls" type="StaticBody2D" parent="." unique_id=567697203]
 
-[node name="LeftWall" type="CollisionShape2D" parent="Walls" unique_id=500370749]
+[node name="LeftWall" type="CollisionShape2D" parent="Walls" unique_id=1248546979]
 position = Vector2(-4, 352.00003)
 scale = Vector2(4.5600004, 4.5600004)
-shape = SubResource("WorldBoundaryShape2D_hbghi")
+shape = SubResource("WorldBoundaryShape2D_ne2mo")
 
-[node name="RightWall" type="CollisionShape2D" parent="Walls" unique_id=801667093]
+[node name="RightWall" type="CollisionShape2D" parent="Walls" unique_id=1052088073]
 position = Vector2(707.42566, 269)
 rotation = -3.1395462
 scale = Vector2(4.5600004, 4.5600004)
-shape = SubResource("WorldBoundaryShape2D_hbghi")
+shape = SubResource("WorldBoundaryShape2D_ne2mo")
 
-[node name="TopWall" type="CollisionShape2D" parent="Walls" unique_id=1499953232]
+[node name="TopWall" type="CollisionShape2D" parent="Walls" unique_id=1132165263]
 position = Vector2(280, 0)
 scale = Vector2(5.4799986, 4.0000014)
-shape = SubResource("WorldBoundaryShape2D_hn12h")
+shape = SubResource("WorldBoundaryShape2D_6cvei")
 
-[node name="BottomWall" type="CollisionShape2D" parent="Walls" unique_id=1870480712]
+[node name="BottomWall" type="CollisionShape2D" parent="Walls" unique_id=434967029]
 position = Vector2(280, 685)
 scale = Vector2(5.4799986, 4.0000014)
-shape = SubResource("WorldBoundaryShape2D_ihfcg")
+shape = SubResource("WorldBoundaryShape2D_que50")
 
-[node name="bottomInWall" type="StaticBody2D" parent="Walls" unique_id=1802087050]
+[node name="bottomInWall" type="StaticBody2D" parent="Walls" unique_id=424763122]
 position = Vector2(111.00001, 149)
 scale = Vector2(1.674125, -0.13999897)
 
-[node name="Sprite2D" type="Sprite2D" parent="Walls/bottomInWall" unique_id=852810693]
+[node name="Sprite2D" type="Sprite2D" parent="Walls/bottomInWall" unique_id=1814715798]
 position = Vector2(-16.997593, 0.28621197)
 scale = Vector2(0.76106846, 1)
-texture = ExtResource("1_3hls8")
+texture = ExtResource("1_eqxsl")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/bottomInWall" unique_id=1967635867]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/bottomInWall" unique_id=1373048876]
 position = Vector2(-16.400272, 0.28621197)
 scale = Vector2(0.76106846, 1)
-shape = SubResource("RectangleShape2D_rka8t")
+shape = SubResource("RectangleShape2D_hey2k")
 
-[node name="rightInWall" type="StaticBody2D" parent="Walls" unique_id=117899724]
+[node name="rightInWall" type="StaticBody2D" parent="Walls" unique_id=2136449247]
 position = Vector2(160.00003, 104.000015)
 rotation = 1.5755091
 scale = Vector2(1.674125, -0.13999897)
 
-[node name="Sprite2D" type="Sprite2D" parent="Walls/rightInWall" unique_id=155342351]
+[node name="Sprite2D" type="Sprite2D" parent="Walls/rightInWall" unique_id=1488295845]
 position = Vector2(-16.997593, 0.28621197)
 scale = Vector2(0.76106846, 1)
-texture = ExtResource("1_3hls8")
+texture = ExtResource("1_eqxsl")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/rightInWall" unique_id=1337640078]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/rightInWall" unique_id=863938501]
 position = Vector2(-16.400272, 0.28621197)
 scale = Vector2(0.76106846, 1)
-shape = SubResource("RectangleShape2D_rka8t")
+shape = SubResource("RectangleShape2D_hey2k")
 
-[node name="Player" parent="." unique_id=1322054010 instance=ExtResource("2_hn12h")]
-position = Vector2(74, 69)
+[node name="TileMap" type="TileMap" parent="." unique_id=1446437929]
+tile_set = SubResource("TileSet_g2hoc")
+format = 2
 
-[node name="LeftArrow" type="Label" parent="." unique_id=2018692035]
+[node name="LeftArrow" type="Label" parent="." unique_id=466271886]
 offset_left = 9.0
 offset_top = 28.0
 offset_right = 66.0
@@ -490,13 +489,13 @@ text = "<"
 metadata/_edit_group_ = true
 metadata/_edit_use_anchors_ = true
 
-[node name="LeftArea2D" type="Area2D" parent="LeftArrow" unique_id=425342413]
+[node name="LeftArea2D" type="Area2D" parent="LeftArrow" unique_id=1973101624]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="LeftArrow/LeftArea2D" unique_id=2135687525]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LeftArrow/LeftArea2D" unique_id=1940310884]
 position = Vector2(29.5, 70.5)
-shape = SubResource("RectangleShape2D_5hph3")
+shape = SubResource("RectangleShape2D_fldb1")
 
-[node name="RightArrow2" type="Label" parent="." unique_id=1935888914]
+[node name="RightArrow2" type="Label" parent="." unique_id=993791758]
 offset_left = 148.0
 offset_top = 118.00001
 offset_right = 205.0
@@ -508,13 +507,13 @@ text = "<"
 metadata/_edit_group_ = true
 metadata/_edit_use_anchors_ = true
 
-[node name="RightArea" type="Area2D" parent="RightArrow2" unique_id=1979094364]
+[node name="RightArea" type="Area2D" parent="RightArrow2" unique_id=914169971]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="RightArrow2/RightArea" unique_id=1642644767]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RightArrow2/RightArea" unique_id=502599799]
 position = Vector2(29.074432, 70.702286)
-shape = SubResource("RectangleShape2D_j7kpp")
+shape = SubResource("RectangleShape2D_guvtl")
 
-[node name="UpArrow" type="Label" parent="." unique_id=1836879747]
+[node name="UpArrow" type="Label" parent="." unique_id=1161427165]
 offset_left = 126.000015
 offset_top = 7.0
 offset_right = 210.00002
@@ -526,13 +525,13 @@ text = "<"
 metadata/_edit_group_ = true
 metadata/_edit_use_anchors_ = true
 
-[node name="UpArrow" type="Area2D" parent="UpArrow" unique_id=394594035]
+[node name="UpArrow" type="Area2D" parent="UpArrow" unique_id=645708764]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="UpArrow/UpArrow" unique_id=1228572005]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="UpArrow/UpArrow" unique_id=1593264406]
 position = Vector2(28.45858, 71.5193)
-shape = SubResource("RectangleShape2D_bjebc")
+shape = SubResource("RectangleShape2D_igmy8")
 
-[node name="DownArro" type="Label" parent="." unique_id=1807274138]
+[node name="DownArro" type="Label" parent="." unique_id=822938630]
 offset_left = 22.000002
 offset_top = 134.0
 offset_right = 106.0
@@ -544,45 +543,35 @@ text = "<"
 metadata/_edit_group_ = true
 metadata/_edit_use_anchors_ = true
 
-[node name="DownArea" type="Area2D" parent="DownArro" unique_id=5662196]
+[node name="DownArea" type="Area2D" parent="DownArro" unique_id=1329031885]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="DownArro/DownArea" unique_id=144783876]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DownArro/DownArea" unique_id=935831023]
 position = Vector2(28.781464, 72.00044)
 scale = Vector2(1.0000002, 1.0000002)
-shape = SubResource("RectangleShape2D_5rr72")
+shape = SubResource("RectangleShape2D_wdtqu")
 
-[node name="Robot" parent="." unique_id=1730246212 instance=ExtResource("4_rka8t")]
-position = Vector2(547, 653)
-
-[node name="TileMap" type="TileMap" parent="." unique_id=1029900957]
-tile_set = SubResource("TileSet_5hph3")
-format = 2
-
-[node name="goal" type="StaticBody2D" parent="." unique_id=197232598]
+[node name="goal" type="StaticBody2D" parent="." unique_id=504244118]
 position = Vector2(49, 237)
 
-[node name="Sprite2D" type="Sprite2D" parent="goal" unique_id=83516742]
+[node name="Sprite2D" type="Sprite2D" parent="goal" unique_id=867173342]
 position = Vector2(5, 23)
 scale = Vector2(0.5, 0.5)
-texture = ExtResource("1_3hls8")
+texture = ExtResource("1_eqxsl")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="goal" unique_id=1903728381]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="goal" unique_id=1197447990]
 position = Vector2(4, 23)
 scale = Vector2(0.5, 0.5)
-shape = SubResource("RectangleShape2D_gyffv")
+shape = SubResource("RectangleShape2D_eqxsl")
 disabled = true
 
-[node name="goalArea" type="Area2D" parent="goal" unique_id=282053290]
+[node name="goalArea" type="Area2D" parent="goal" unique_id=1306366967]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="goal/goalArea" unique_id=18872733]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="goal/goalArea" unique_id=827631258]
 position = Vector2(5, 22.5)
-shape = SubResource("RectangleShape2D_1pe0h")
+shape = SubResource("RectangleShape2D_b4j7a")
 
-[connection signal="body_entered" from="LeftArrow/LeftArea2D" to="." method="_on_left_area_2d_body_entered"]
-[connection signal="body_exited" from="LeftArrow/LeftArea2D" to="." method="_on_left_area_2d_body_exited"]
-[connection signal="body_entered" from="RightArrow2/RightArea" to="." method="_on_right_area_body_entered"]
-[connection signal="body_exited" from="RightArrow2/RightArea" to="." method="_on_right_area_body_exited"]
-[connection signal="body_entered" from="UpArrow/UpArrow" to="." method="_on_up_arrow_body_entered"]
-[connection signal="body_exited" from="UpArrow/UpArrow" to="." method="_on_up_arrow_body_exited"]
-[connection signal="body_entered" from="DownArro/DownArea" to="." method="_on_down_area_body_entered"]
-[connection signal="body_exited" from="DownArro/DownArea" to="." method="_on_down_area_body_exited"]
+[node name="Robot" parent="." unique_id=1730246212 instance=ExtResource("2_b4j7a")]
+position = Vector2(547, 653)
+
+[node name="Player" parent="." unique_id=1322054010 instance=ExtResource("4_y0kc7")]
+position = Vector2(74, 69)
