@@ -23,4 +23,5 @@ I am also proud of my self for actually finishing this game and not giving
 
 
 Image of one of the mazes:
+
 <img width="702" height="701" alt="Screenshot 2026-06-07 180020" src="https://github.com/user-attachments/assets/8dac6d83-9e42-46f8-ab11-bd3ea416d6a5" />
