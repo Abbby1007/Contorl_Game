@@ -4,9 +4,13 @@ Game Title: Control Evil Robot
 Made for the Mini Jam  #212 (72 Hour)
 
 The theme was "Control" with the limtation "You are the enemy"
+
 Game Controls:
+
 In this game you will control an astronaut  using arrows keys or  "W", "A", "S","D".
+
 With the astronaut you can control the red robot with the displayed arrows in the left top corner . Your goal is to get to the other robot.
+
 Demo Link: https://abbby1007.itch.io/control-not-so-good-robot
 
 About the Game:
