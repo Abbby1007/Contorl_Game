@@ -1,12 +1,12 @@
 [gd_scene format=3 uid="uid://diuip52ta3wnl"]
 
 [ext_resource type="Script" uid="uid://c1cstj4cdl0v" path="res://scripts/level_2.gd" id="1_b4j7a"]
-[ext_resource type="Texture2D" uid="uid://c6ex8tsw8x11i" path="res://icon.svg" id="1_eqxsl"]
 [ext_resource type="PackedScene" uid="uid://dahxnxjfyfnjn" path="res://scenes/robot.tscn" id="2_b4j7a"]
 [ext_resource type="Texture2D" uid="uid://c56xbjafckib7" path="res://art/Solaria Demo Tiles.png" id="3_wo48x"]
 [ext_resource type="PackedScene" uid="uid://ce50yt7p5h1x6" path="res://scenes/Player.tscn" id="4_y0kc7"]
+[ext_resource type="Texture2D" uid="uid://8tc2uf5digq8" path="res://art/Good Robot.png" id="5_b4j7a"]
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_rka8t"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_wo48x"]
 texture = ExtResource("3_wo48x")
 0:0/0 = 0
 1:0/0 = 0
@@ -389,7 +389,7 @@ texture = ExtResource("3_wo48x")
 
 [sub_resource type="TileSet" id="TileSet_5hph3"]
 physics_layer_0/collision_layer = 1
-sources/0 = SubResource("TileSetAtlasSource_rka8t")
+sources/0 = SubResource("TileSetAtlasSource_wo48x")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5hph3"]
 size = Vector2(51, 53)
@@ -403,11 +403,13 @@ size = Vector2(48.999996, 52.998222)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5rr72"]
 size = Vector2(49.780228, 53.04509)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_gyffv"]
-size = Vector2(123.33333, 123.33333)
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_y0kc7"]
+radius = 46.0
+height = 120.0
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_1pe0h"]
-size = Vector2(64, 63)
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ne2mo"]
+radius = 22.0
+height = 62.0
 
 [node name="level 2" type="Node2D" unique_id=531721738]
 script = ExtResource("1_b4j7a")
@@ -492,29 +494,29 @@ shape = SubResource("RectangleShape2D_5rr72")
 [node name="Player" parent="." unique_id=1322054010 instance=ExtResource("4_y0kc7")]
 position = Vector2(74, 69)
 
-[node name="goal" type="StaticBody2D" parent="." unique_id=197232598]
-position = Vector2(207, 12)
-metadata/_edit_group_ = true
-
-[node name="Sprite2D" type="Sprite2D" parent="goal" unique_id=83516742]
-position = Vector2(5, 23)
-scale = Vector2(0.5, 0.5)
-texture = ExtResource("1_eqxsl")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="goal" unique_id=1903728381]
-position = Vector2(4, 23)
-scale = Vector2(0.5, 0.5)
-shape = SubResource("RectangleShape2D_gyffv")
-disabled = true
-
-[node name="goalArea" type="Area2D" parent="goal" unique_id=282053290]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="goal/goalArea" unique_id=18872733]
-position = Vector2(5, 22.5)
-shape = SubResource("RectangleShape2D_1pe0h")
-
 [node name="Robot" parent="." unique_id=1730246212 instance=ExtResource("2_b4j7a")]
 position = Vector2(231, 142)
+
+[node name="goal" type="StaticBody2D" parent="." unique_id=203985272]
+position = Vector2(217, 12)
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="goal" unique_id=2123843435]
+position = Vector2(5, 23)
+scale = Vector2(2, 2)
+texture = ExtResource("5_b4j7a")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="goal" unique_id=238058474]
+position = Vector2(11, 21)
+scale = Vector2(0.5, 0.5)
+shape = SubResource("CapsuleShape2D_y0kc7")
+disabled = true
+
+[node name="goalArea" type="Area2D" parent="goal" unique_id=2052626416]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="goal/goalArea" unique_id=910142985]
+position = Vector2(11, 21)
+shape = SubResource("CapsuleShape2D_ne2mo")
 
 [connection signal="body_entered" from="LeftArrow/LeftArea2D" to="." method="_on_left_area_2d_body_entered"]
 [connection signal="body_exited" from="LeftArrow/LeftArea2D" to="." method="_on_left_area_2d_body_exited"]

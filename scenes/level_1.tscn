@@ -1,10 +1,10 @@
 [gd_scene format=3 uid="uid://du8tyixs6kbip"]
 
-[ext_resource type="Texture2D" uid="uid://c6ex8tsw8x11i" path="res://icon.svg" id="1_3hls8"]
 [ext_resource type="Script" uid="uid://b1d6sbum8pl3a" path="res://scripts/level_1.gd" id="1_4nkto"]
 [ext_resource type="PackedScene" uid="uid://ce50yt7p5h1x6" path="res://scenes/Player.tscn" id="2_hn12h"]
 [ext_resource type="Texture2D" uid="uid://c56xbjafckib7" path="res://art/Solaria Demo Tiles.png" id="3_ihfcg"]
 [ext_resource type="PackedScene" uid="uid://dahxnxjfyfnjn" path="res://scenes/robot.tscn" id="4_rka8t"]
+[ext_resource type="Texture2D" uid="uid://8tc2uf5digq8" path="res://art/Good Robot.png" id="5_4nkto"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vcx5n"]
 texture = ExtResource("3_ihfcg")
@@ -403,11 +403,13 @@ size = Vector2(48.999996, 52.998222)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5xqnf"]
 size = Vector2(49.780228, 53.04509)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_una4e"]
-size = Vector2(123.33333, 123.33333)
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_fcfvj"]
+radius = 46.0
+height = 120.0
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_ema3p"]
-size = Vector2(64, 63)
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_pa8r4"]
+radius = 22.0
+height = 62.0
 
 [node name="level_1" type="Node2D" unique_id=1154913597]
 script = ExtResource("1_4nkto")
@@ -489,33 +491,34 @@ position = Vector2(28.781464, 72.00044)
 scale = Vector2(1.0000002, 1.0000002)
 shape = SubResource("RectangleShape2D_5xqnf")
 
-[node name="goal" type="StaticBody2D" parent="." unique_id=297491312]
-position = Vector2(203, 19)
-scale = Vector2(0.5, 0.5)
-
-[node name="Sprite2D" type="Sprite2D" parent="goal" unique_id=1562013657]
-position = Vector2(5, 23)
-scale = Vector2(0.5, 0.5)
-texture = ExtResource("1_3hls8")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="goal" unique_id=1509341494]
-position = Vector2(4, 23)
-scale = Vector2(0.5, 0.5)
-shape = SubResource("RectangleShape2D_una4e")
-disabled = true
-
-[node name="goalArea" type="Area2D" parent="goal" unique_id=454524020]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="goal/goalArea" unique_id=1322925232]
-position = Vector2(5, 22.5)
-shape = SubResource("RectangleShape2D_ema3p")
-
 [node name="Robot" parent="." unique_id=1730246212 instance=ExtResource("4_rka8t")]
 position = Vector2(309, 28)
 scale = Vector2(0.5, 0.5)
 
 [node name="Player" parent="." unique_id=1322054010 instance=ExtResource("2_hn12h")]
 position = Vector2(74, 69)
+
+[node name="goal" type="StaticBody2D" parent="." unique_id=719594535]
+position = Vector2(186, 13)
+scale = Vector2(0.5, 0.5)
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="goal" unique_id=648862651]
+position = Vector2(5, 23)
+scale = Vector2(2, 2)
+texture = ExtResource("5_4nkto")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="goal" unique_id=1972793163]
+position = Vector2(11, 21)
+scale = Vector2(0.5, 0.5)
+shape = SubResource("CapsuleShape2D_fcfvj")
+disabled = true
+
+[node name="goalArea" type="Area2D" parent="goal" unique_id=1966705188]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="goal/goalArea" unique_id=1905233510]
+position = Vector2(11, 21)
+shape = SubResource("CapsuleShape2D_pa8r4")
 
 [connection signal="body_entered" from="LeftArrow/LeftArea2D" to="." method="_on_left_area_2d_body_entered"]
 [connection signal="body_exited" from="LeftArrow/LeftArea2D" to="." method="_on_left_area_2d_body_exited"]
