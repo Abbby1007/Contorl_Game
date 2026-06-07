@@ -493,7 +493,7 @@ shape = SubResource("RectangleShape2D_vcsgt")
 position = Vector2(76, 84)
 
 [node name="Robot" parent="." unique_id=1730246212 instance=ExtResource("3_0bbpv")]
-position = Vector2(643, 667)
+position = Vector2(512, 658)
 
 [node name="goal" type="StaticBody2D" parent="." unique_id=2059280778]
 position = Vector2(30, 257)

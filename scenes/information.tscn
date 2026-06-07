@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://d3x0xury2bod5"]
 
+[ext_resource type="Script" uid="uid://qkwugdqhvobw" path="res://scripts/information.gd" id="1_7dbpe"]
 [ext_resource type="Texture2D" uid="uid://c56xbjafckib7" path="res://art/Solaria Demo Tiles.png" id="1_vuxuq"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7dbpe"]
@@ -388,6 +389,7 @@ physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_7dbpe")
 
 [node name="information" type="Node2D" unique_id=1701839945]
+script = ExtResource("1_7dbpe")
 
 [node name="TileMap2" type="TileMap" parent="." unique_id=268411933]
 tile_set = SubResource("TileSet_ixhji")
@@ -418,3 +420,15 @@ that will control a not so good robot.
 Your goal is to get to the other robot.
 "
 horizontal_alignment = 1
+
+[node name="Back" type="Button" parent="." unique_id=258716143]
+offset_left = 518.0
+offset_top = 92.0
+offset_right = 660.0
+offset_bottom = 157.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 7
+theme_override_font_sizes/font_size = 40
+text = "BACK"
+
+[connection signal="pressed" from="Back" to="." method="_on_back_pressed"]

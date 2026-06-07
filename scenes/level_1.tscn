@@ -492,7 +492,7 @@ scale = Vector2(1.0000002, 1.0000002)
 shape = SubResource("RectangleShape2D_5xqnf")
 
 [node name="Robot" parent="." unique_id=1730246212 instance=ExtResource("4_rka8t")]
-position = Vector2(658, 667)
+position = Vector2(664, 667)
 scale = Vector2(0.5, 0.5)
 
 [node name="Player" parent="." unique_id=1322054010 instance=ExtResource("2_hn12h")]
