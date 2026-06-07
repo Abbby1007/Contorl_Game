@@ -3,7 +3,6 @@
 [ext_resource type="PackedScene" uid="uid://ce50yt7p5h1x6" path="res://scenes/Player.tscn" id="1_elqb8"]
 [ext_resource type="Script" uid="uid://e2jvnki50bwy" path="res://scripts/main.gd" id="1_rvslj"]
 [ext_resource type="PackedScene" uid="uid://dahxnxjfyfnjn" path="res://scenes/robot.tscn" id="3_0bbpv"]
-[ext_resource type="PackedScene" uid="uid://dj1ckodjbcw2n" path="res://scenes/levelWall.tscn" id="5_vcsgt"]
 [ext_resource type="Texture2D" uid="uid://c56xbjafckib7" path="res://art/Solaria Demo Tiles.png" id="6_c01mt"]
 [ext_resource type="Texture2D" uid="uid://8tc2uf5digq8" path="res://art/Good Robot.png" id="6_nxtc6"]
 
@@ -416,50 +415,6 @@ height = 62.0
 [node name="Main" type="Node2D" unique_id=821967079]
 script = ExtResource("1_rvslj")
 
-[node name="levelWalls" type="Node2D" parent="." unique_id=1174366816]
-position = Vector2(596, 693)
-rotation = -1.5707964
-scale = Vector2(2.32, 1)
-
-[node name="levelWall" parent="levelWalls" unique_id=359350620 instance=ExtResource("5_vcsgt")]
-position = Vector2(-0.862068, -53)
-scale = Vector2(0.8706901, 1)
-
-[node name="levelWall2" parent="levelWalls" unique_id=1435516001 instance=ExtResource("5_vcsgt")]
-position = Vector2(101.72415, -45.00002)
-rotation = -1.5707964
-scale = Vector2(3.3515358, 0.657248)
-
-[node name="levelWall6" parent="levelWalls" unique_id=20858112 instance=ExtResource("5_vcsgt")]
-position = Vector2(145.25858, -225)
-rotation = -1.5707964
-scale = Vector2(2.8687778, 0.657248)
-
-[node name="levelWall8" parent="levelWalls" unique_id=1390365968 instance=ExtResource("5_vcsgt")]
-position = Vector2(193.96552, -17.99998)
-rotation = -1.5707964
-scale = Vector2(2.680192, 0.657248)
-
-[node name="levelWall7" parent="levelWalls" unique_id=1199893025 instance=ExtResource("5_vcsgt")]
-position = Vector2(154.31032, -255)
-rotation = -0.030559778
-scale = Vector2(0.3439578, 1.3939667)
-
-[node name="levelWall10" parent="levelWalls" unique_id=1147206522 instance=ExtResource("5_vcsgt")]
-position = Vector2(156.46553, -38.000008)
-rotation = -0.030559778
-scale = Vector2(0.3439578, 1.3939667)
-
-[node name="levelWall11" parent="levelWalls" unique_id=1707800049 instance=ExtResource("5_vcsgt")]
-position = Vector2(201.72414, -135.99998)
-rotation = -0.030559778
-scale = Vector2(0.49820802, 1.3939667)
-
-[node name="levelWall12" parent="levelWalls" unique_id=1759281801 instance=ExtResource("5_vcsgt")]
-position = Vector2(274.13794, -294.99997)
-rotation = 1.5714957
-scale = Vector2(1.3952067, 0.71370786)
-
 [node name="TileMap" type="TileMap" parent="." unique_id=1197729289]
 position = Vector2(76, 84)
 tile_set = SubResource("TileSet_jlsqs")
@@ -538,10 +493,11 @@ shape = SubResource("RectangleShape2D_vcsgt")
 position = Vector2(76, 84)
 
 [node name="Robot" parent="." unique_id=1730246212 instance=ExtResource("3_0bbpv")]
-position = Vector2(171, 292)
+position = Vector2(643, 667)
 
 [node name="goal" type="StaticBody2D" parent="." unique_id=2059280778]
-position = Vector2(37, 257)
+position = Vector2(30, 257)
+metadata/_edit_group_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="goal" unique_id=982232433]
 position = Vector2(5, 23)

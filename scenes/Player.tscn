@@ -4,14 +4,13 @@
 [ext_resource type="Texture2D" uid="uid://bw3dlag0af0s5" path="res://art/astronaut.png" id="2_v6fml"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_v6fml"]
-radius = 56.666664
-height = 173.33333
+radius = 40.0
+height = 113.33333
 
 [node name="Player" type="CharacterBody2D" unique_id=1322054010]
 script = ExtResource("1_v6fml")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1760205744]
-scale = Vector2(1.5, 1.5)
 texture = ExtResource("2_v6fml")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1605912800]
