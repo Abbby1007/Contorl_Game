@@ -405,7 +405,7 @@ theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 10
 theme_override_font_sizes/font_size = 34
 text = "This game was made by 
-Abigail Loken for
+Abigail L for
 Mini Jam 212
 The theme was \"Control\" 
 with a limitation \"You are the enemy\"
